@@ -13,6 +13,9 @@ namespace erics_game
 
             while(PlayerState.Health > 0 && PlayerState.ShipFuel > 0)
             {
+                // If you set Health and Ship Fuel to not be zero
+                // in its current state it will execute an inifnite loop
+                // as getNext doesn't do anything to update these values currently.
                 Decisions.getNext();
             }
 
