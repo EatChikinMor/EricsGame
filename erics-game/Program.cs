@@ -9,6 +9,7 @@ namespace erics_game
             //This is the entry point of the program. The entirety of the program from start to end exists here, and it calls external methods to progress and do more complex things.
             Initialize();
             OutputHelpers.OutputPlayerState();
+            Console.WriteLine("Press any key to begin.");
             Console.ReadKey();
 
             while(PlayerState.Health > 0 && PlayerState.ShipFuel > 0)
