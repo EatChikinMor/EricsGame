@@ -3,6 +3,10 @@ using System.Collections.Generic;
 
 namespace erics_game
 {
+	/* This file would have been massive and contained the entirety of the "Game", The full decision tree and the values of those decisions, state variables and text.
+	 * This would have been better broken out into a YAML or JSON file or something more declarative than instantiating a bunch of static C# objects. C# is too clunky
+	 * for this use case.
+	 */
 	public static class GameFlow
 	{
 		static GameFlow()

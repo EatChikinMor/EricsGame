@@ -6,8 +6,9 @@ namespace erics_game
     {
         static void Main(string[] args)
         {
-
-            OutputHelpers.OutputState();
+            //This is the entry point of the program. The entirety of the program from start to end exists here, and it calls external methods to progress and do more complex things.
+            Initialize();
+            OutputHelpers.OutputPlayerState();
             Console.ReadKey();
 
             while(PlayerState.Health > 0 && PlayerState.ShipFuel > 0)
@@ -30,6 +31,7 @@ namespace erics_game
 
         static void Initialize()
         {
+            //This establishes the state variables
             PlayerState.Health = 0;
             PlayerState.Money = 1000.00m;
             PlayerState.ShipFuel = 100;

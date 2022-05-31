@@ -3,6 +3,11 @@ using System.Collections.Generic;
 
 namespace erics_game
 {
+	/* These are all the game object definitions.
+	 * This define all the properties and objects that contain them
+	 */
+
+	// An individual game step. This would include the text output to the user, all the options they have available to them.
 	public class GameStep
 	{
 		public GameStep(string _text = "", string _action = "", List<Option> _options = null)
@@ -17,6 +22,7 @@ namespace erics_game
 		public List<Option> options { get; set; }
 	}
 
+	// An individual option. This includes the text for that option, and the state updates that would occur as a result of its selection
 	public class Option
     {
 		public Option(string _text, PlayerUpdates _playerUpdate, GameUpdates _gameUpdates)
@@ -32,6 +38,7 @@ namespace erics_game
 
 	}
 
+	// PLayer state update
 	public class PlayerUpdates
     {
 		public PlayerUpdates(int _changeHealthBy, int _changeFuelBy, decimal _changeMoneyBy)
@@ -46,6 +53,7 @@ namespace erics_game
 		public decimal changeMoneyBy { get; set; }
 	}
 
+	// Game state update
 	public class GameUpdates
     {
 		public GameUpdates(decimal _changeFuelRate)
